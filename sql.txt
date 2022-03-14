@@ -14,3 +14,14 @@ CREATE TABLE IF NOT EXISTS `schemaName`.`tableName` (
   datumRodjenja DATE NOT NULL,
   role ENUM('Administrator', 'Korisnik') NOT NULL DEFAULT 'Korisnik')
 AUTO_INCREMENT = 1
+
+
+/*
+
+#To create administrator of DB use INSERT STATEMENT SHOWN BELOW:
+
+
+INSERT INTO tableName(username,password,Ime,Prezime,JMBG,ZIP,CVV,datumRodjenja,role) VALUES
+("admin","admin","NAME","SURNAME","JMBG-NUMBER","ZIP_CODE","2003-22-10","Administrator");
+
+*/
