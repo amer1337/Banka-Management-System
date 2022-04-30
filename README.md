@@ -3,4 +3,4 @@
 #Project about bank management system;<br>
 #Done 50%;<br>
 <b>#C#.NET and MySQL</b><br>
-#___SQL SCRIPT IN SQL.TXT FILE___
+#___SQL SCRIPT IN SQL-SCRIPT FILE___
