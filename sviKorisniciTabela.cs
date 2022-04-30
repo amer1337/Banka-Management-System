@@ -31,7 +31,7 @@ namespace login_panel
             {
                 string MyConnection2 = "datasource=localhost;port=3306;username=root;password=Amerdelic1.";
                 //kveri za povlacenje podataka
-                string Query = "select * from ade.korisnici;";
+                string Query = "SELECT korisnici.id, korisnici.username,  korisnici.password, korisnici.Ime,  korisnici.Prezime, korisnici.JMBG,korisnici.ZIP, korisnici.CVV, korisnici.datumRodjenja,korisnici.role FROM ade.korisnici;";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
@@ -42,8 +42,9 @@ namespace login_panel
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Nije moguće!", "BAZA NIJE UCITANA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                //MessageBox.Show("Nije moguće!", "BAZA NIJE UCITANA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
+            }   
         }
     }
 }

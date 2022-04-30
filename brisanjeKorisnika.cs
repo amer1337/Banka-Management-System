@@ -66,9 +66,8 @@ namespace login_panel
             if (MyReader2.Read()) {
                 delUsername.Text = (MyReader2["username"].ToString());
                 delPassword.Text = (MyReader2["password"].ToString());
-            }cnn.Close();
-
-
+            }
+            cnn.Close();
         }
 
         private void brisanjeKorisnika_Load(object sender, EventArgs e)

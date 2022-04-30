@@ -57,7 +57,8 @@ namespace login_panel
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                MessageBox.Show("Username ili CVV su već uneseni u bazu, promijenite ih!", "[ERROR]", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

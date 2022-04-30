@@ -53,5 +53,11 @@ namespace login_panel
             editKorisnika f2 = new editKorisnika();
             f2.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            krediti f2 = new krediti();
+            f2.ShowDialog();
+        }
     }
 }

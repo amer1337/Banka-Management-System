@@ -16,5 +16,26 @@ namespace login_panel
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            transferNovcaKorisnik f2 = new transferNovcaKorisnik();
+            f2.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            produzenjeKarticeKorisnik f2 = new produzenjeKarticeKorisnik();
+            f2.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            editRacuna f2 = new editRacuna();
+            f2.ShowDialog();
+        }
     }
 }
