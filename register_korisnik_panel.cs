@@ -26,17 +26,18 @@ namespace login_panel
             this.txtZip.Clear();
             this.txtUsername.Clear();
             this.txtPassword.Clear();
-            this.txtCvv.Clear();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Random brojCVV = new Random();
+            int number = brojCVV.Next(100, 1000);
             try
             {
                 //konekcija string 
                 string MyConnection2 = "datasource= localhost; database=ade;port=3306; username = root; password= Amerdelic1.";
-                //kveri za insert podataka u bazu sqla 
-                string Query = "INSERT INTO ade.korisnici(username,password,Ime,Prezime,JMBG,ZIP,CVV,datumRodjenja) VALUES('" + this.txtUsername.Text + "','" + this.txtPassword.Text + "','" + this.txtIme.Text + "','" + this.txtPrezime.Text + "','" + this.txtJMBG.Text + "','" + this.txtZip.Text + "','" + this.txtCvv.Text + "','" + this.dateTimePicker1.Text + "');";
+                //query za insert podataka u bazu sqla 
+                string Query = "INSERT INTO ade.korisnici(username,password,Ime,Prezime,JMBG,ZIP,CVV,datumRodjenja) VALUES('" + this.txtUsername.Text + "','" + this.txtPassword.Text + "','" + this.txtIme.Text + "','" + this.txtPrezime.Text + "','" + this.txtJMBG.Text + "','" + this.txtZip.Text + "','" + number + "','" + this.dateTimePicker1.Text + "');";
                 //ojb. mysql konekcije  
                
                 MySqlConnection cnn = new MySqlConnection(MyConnection2);
@@ -46,7 +47,7 @@ namespace login_panel
                 cnn.Open();
                 //kveri izvrsavanje i ubacivanje u bazu SQLa
                 MyReader2 = MyCommand2.ExecuteReader();
-                MessageBox.Show("Korisnik uspjesno registrovan", "REGISTRACIJA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Čestitamo na uspješnoj registraciji korisniče.\nVaš CVV je : "+number+", ZAPAMTITE GA ILI ZAPIŠITE!\n\n\n Vaša banka! ", "REGISTRACIJA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 Form1 f2 = new Form1();
                 f2.ShowDialog();
@@ -58,7 +59,7 @@ namespace login_panel
             catch (Exception ex)
             {
                 //MessageBox.Show(ex.Message);
-                MessageBox.Show("Username ili CVV su već uneseni u bazu, promijenite ih!", "[ERROR]", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Registracija nije uspjela, molimo pokušajte kasnije!", "[ERROR]", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

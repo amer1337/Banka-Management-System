@@ -38,8 +38,6 @@ namespace login_panel
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtCvv = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -118,8 +116,6 @@ namespace login_panel
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.txtCvv);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.txtPassword);
             this.panel4.Controls.Add(this.label8);
@@ -167,33 +163,12 @@ namespace login_panel
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(78)))), ((int)(((byte)(53)))));
-            this.label10.Location = new System.Drawing.Point(443, 161);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 24);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "CVV";
-            // 
-            // txtCvv
-            // 
-            this.txtCvv.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtCvv.Location = new System.Drawing.Point(443, 188);
-            this.txtCvv.Multiline = true;
-            this.txtCvv.Name = "txtCvv";
-            this.txtCvv.Size = new System.Drawing.Size(171, 28);
-            this.txtCvv.TabIndex = 22;
-            this.txtCvv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(78)))), ((int)(((byte)(53)))));
-            this.label9.Location = new System.Drawing.Point(443, 90);
+            this.label9.Location = new System.Drawing.Point(459, 129);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 24);
             this.label9.TabIndex = 21;
@@ -202,7 +177,7 @@ namespace login_panel
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtPassword.Location = new System.Drawing.Point(443, 117);
+            this.txtPassword.Location = new System.Drawing.Point(459, 156);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -215,7 +190,7 @@ namespace login_panel
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(78)))), ((int)(((byte)(53)))));
-            this.label8.Location = new System.Drawing.Point(443, 19);
+            this.label8.Location = new System.Drawing.Point(459, 58);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 24);
             this.label8.TabIndex = 19;
@@ -224,7 +199,7 @@ namespace login_panel
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtUsername.Location = new System.Drawing.Point(443, 46);
+            this.txtUsername.Location = new System.Drawing.Point(459, 85);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(171, 28);
@@ -235,7 +210,7 @@ namespace login_panel
             // 
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(439, 270);
+            this.dateTimePicker1.Location = new System.Drawing.Point(459, 233);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(171, 20);
             this.dateTimePicker1.TabIndex = 15;
@@ -245,7 +220,7 @@ namespace login_panel
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(78)))), ((int)(((byte)(53)))));
-            this.label6.Location = new System.Drawing.Point(439, 243);
+            this.label6.Location = new System.Drawing.Point(459, 206);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(147, 24);
             this.label6.TabIndex = 14;
@@ -343,8 +318,9 @@ namespace login_panel
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "register_korisnik_panel";
-            this.Text = "register_korisnik_panel";
+            this.Text = "Registrovanje ";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -364,8 +340,6 @@ namespace login_panel
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtCvv;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label8;

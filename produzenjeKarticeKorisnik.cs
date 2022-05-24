@@ -30,7 +30,7 @@ namespace login_panel
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("▶Unesite validno ime ziranta\n▶Unesite realnu cifru za podizanje kredita\n▶Potvrdite vas username\n\n\n▶Za ostale informacije obratite se nasem osoblju", "▶PRAVILA",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("▶Unesite validno ime ziranta\n▶Unesite realnu cifru za podizanje kredita\n▶Potvrdite vas username\n▶Cifru kredita mozete unijeti kao decimalnu vrijednost\n\n\n\n▶Za ostale informacije obratite se nasem osoblju\n\n\n\n                        【 VAŠA BANKA 】", "▶PRAVILA",MessageBoxButtons.OK,MessageBoxIcon.Information);
             textBox1.Enabled = true;
             textBox2.Enabled = true;
             textBox3.Enabled = true;
@@ -62,6 +62,13 @@ namespace login_panel
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            main_forma_Korisnik f2 = new main_forma_Korisnik();
+            f2.ShowDialog();
         }
     }
 }

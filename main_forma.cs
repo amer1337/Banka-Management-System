@@ -59,5 +59,19 @@ namespace login_panel
             krediti f2 = new krediti();
             f2.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            transferNovcaAdmin f2 = new transferNovcaAdmin();
+            f2.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            dodavanjeNovca f2 = new dodavanjeNovca();
+            f2.ShowDialog();
+        }
     }
 }

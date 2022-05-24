@@ -45,6 +45,9 @@ namespace login_panel
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)
+                // IF uslov koji provjerava da li je index reda veći ili jednak nuli, ukoliko jeste
+                //dešava se to da naš textbox1 i textbox 2 pokupe informacije iz cijele kolone 
+                // na koju je korisnik kliknuo
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 textBox1.Text = row.Cells[1].Value.ToString();
@@ -61,7 +64,7 @@ namespace login_panel
                 string MyConnection2 = "datasource=localhost;port=3306;username=root;password=Amerdelic1.";
                 string pamćenje = "";
                 string cifra = "";
-                string Query = "update ade.kredit set validanKredit='" + "Da" + "' where username='" + this.textBox1.Text + "';";
+                string Query = "update ade.kredit set validanKredit='" + "Da" + "' where username='" + this.textBox1.Text + "';update ade.korisnici set stanjeRacuna=stanjeRacuna + '" + Convert.ToDouble(textBox2.Text) + "' where username='" + this.textBox1.Text + "';";
                 MySqlConnection cnn = new MySqlConnection(MyConnection2);
                 pamćenje = this.textBox1.Text;
                 cifra = this.textBox2.Text;
@@ -79,6 +82,24 @@ namespace login_panel
             {
                 MessageBox.Show(ex.Message);
             }
+            /*try
+            {
+
+                string MyConnection2 = "datasource=localhost;port=3306;username=root;password=Amerdelic1.";
+                string Query = "update ade.korisnici set stanjeRacuna='" + Convert.ToDouble(textBox2.Text) + "' where username='" + this.textBox1.Text + "';";
+                MySqlConnection cnn = new MySqlConnection(MyConnection2);
+                MySqlCommand MyCommand2 = new MySqlCommand(Query, cnn);
+                MySqlDataReader MyReader2;
+                cnn.Open();
+                MyReader2 = MyCommand2.ExecuteReader();
+                {
+                }
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }*/
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -103,6 +124,13 @@ namespace login_panel
             {
                 MessageBox.Show("Nije moguce obrisati podatke", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            main_forma f2 = new main_forma();
+            f2.ShowDialog();
         }
     }
     }

@@ -34,10 +34,6 @@ namespace login_panel
             if (reader.Read())
             {
                 userRole = reader["role"].ToString();
-                /*
-                 provjeravanje na sta je korisnik kliknuo i ukoliko je odabrao administratora na comboboxu
-                provjerava njegove podatke tj. njegov "ROLE" koji se moze mijenjati samo direktno kroz mysql
-                 */
                 if (comboBox1.SelectedIndex == 0 && userRole == "Administrator")
                 {
                         this.Hide();

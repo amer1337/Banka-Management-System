@@ -11,40 +11,33 @@ using MySql.Data.MySqlClient;
 
 namespace login_panel
 {
-    public partial class sviKorisniciTabela : Form
+    public partial class stanjeRacuna : Form
     {
-        public sviKorisniciTabela()
+        public stanjeRacuna()
         {
             InitializeComponent();
         }
 
-        private void btn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            main_forma f2 = new main_forma();
-            f2.ShowDialog();
-        }
-
-        private void sviKorisniciTabela_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 string MyConnection2 = "datasource=localhost;port=3306;username=root;password=Amerdelic1.";
                 //kveri za povlacenje podataka
-                string Query = "SELECT korisnici.ID,korisnici.username, korisnici.password,korisnici.stanjeRacuna, korisnici.Ime,  korisnici.Prezime, korisnici.JMBG,korisnici.ZIP, korisnici.CVV, korisnici.datumRodjenja,korisnici.role FROM ade.korisnici;";
+                string Query = "SELECT Ime,Prezime,stanjeRacuna FROM ade.korisnici WHERE CVV='"+textBox2.Text+"';";
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
                 MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                 MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
                 MyAdapter.SelectCommand = MyCommand2;
-                DataTable sviKorisnici = new DataTable();
-                MyAdapter.Fill(sviKorisnici);
-                dataGridView1.DataSource = sviKorisnici;
+                DataTable stanjeRacuna = new DataTable();
+                MyAdapter.Fill(stanjeRacuna);
+                dataGridView1.DataSource = stanjeRacuna;
             }
             catch (Exception ex)
             {
                 //MessageBox.Show("Nije moguće!", "BAZA NIJE UCITANA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 MessageBox.Show(ex.Message);
-            }   
+            }
         }
     }
 }

@@ -59,6 +59,12 @@
     <Compile Include="brisanjeKorisnika.Designer.cs">
       <DependentUpon>brisanjeKorisnika.cs</DependentUpon>
     </Compile>
+    <Compile Include="dodavanjeNovca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dodavanjeNovca.Designer.cs">
+      <DependentUpon>dodavanjeNovca.cs</DependentUpon>
+    </Compile>
     <Compile Include="editKorisnika.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,11 +115,23 @@
     <Compile Include="register_korisnik_panel.Designer.cs">
       <DependentUpon>register_korisnik_panel.cs</DependentUpon>
     </Compile>
+    <Compile Include="stanjeRacuna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stanjeRacuna.Designer.cs">
+      <DependentUpon>stanjeRacuna.cs</DependentUpon>
+    </Compile>
     <Compile Include="sviKorisniciTabela.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="sviKorisniciTabela.Designer.cs">
       <DependentUpon>sviKorisniciTabela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transferNovcaAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transferNovcaAdmin.Designer.cs">
+      <DependentUpon>transferNovcaAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="transferNovcaKorisnik.cs">
       <SubType>Form</SubType>
@@ -123,6 +141,9 @@
     </Compile>
     <EmbeddedResource Include="brisanjeKorisnika.resx">
       <DependentUpon>brisanjeKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dodavanjeNovca.resx">
+      <DependentUpon>dodavanjeNovca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editKorisnika.resx">
       <DependentUpon>editKorisnika.cs</DependentUpon>
@@ -157,8 +178,14 @@
     <EmbeddedResource Include="register_korisnik_panel.resx">
       <DependentUpon>register_korisnik_panel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="stanjeRacuna.resx">
+      <DependentUpon>stanjeRacuna.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sviKorisniciTabela.resx">
       <DependentUpon>sviKorisniciTabela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transferNovcaAdmin.resx">
+      <DependentUpon>transferNovcaAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="transferNovcaKorisnik.resx">
       <DependentUpon>transferNovcaKorisnik.cs</DependentUpon>
